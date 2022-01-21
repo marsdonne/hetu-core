@@ -42,4 +42,4 @@ EXPOSE $PORT
 USER openlkadmin:openlkadmin
 ENV LANG en_US.UTF-8
 HEALTHCHECK CMD curl --fail http://localhost:8080/v1/info/state || exit 1
-ENTRYPOINT ["/usr/lib/hetu/bin/run-hetu"]
+ENTRYPOINT ["sh","/usr/lib/hetu/bin/run-hetu"]
